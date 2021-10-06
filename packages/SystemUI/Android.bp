@@ -99,6 +99,8 @@ android_library {
         "tensorflowlite_java",
         "SystemUIGoogle-lib",
         "vendor.lineage.powershare-V1.0-java",
+        "colorkt",
+        "themelib",
     ],
     manifest: "AndroidManifest.xml",
     additional_manifests: ["SystemUIGoogle-Manifest.xml"],
