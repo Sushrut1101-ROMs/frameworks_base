@@ -69,6 +69,9 @@ LOCAL_REQUIRED_MODULES := \
         IconShapeVesselOverlay \
         IconPackOOSAndroidOverlay \
         IconPackOOSSystemUIOverlay \
+        IconPackOOSLauncherOverlay \
+        IconPackOOSSettingsOverlay \
+        IconPackOOSThemePickerOverlay \
 	NavigationBarMode3ButtonOverlay \
 	NavigationBarModeGesturalOverlay \
 	NavigationBarModeGesturalOverlayNarrowBack \
