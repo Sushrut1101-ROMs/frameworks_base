@@ -67,7 +67,6 @@ import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.lang.annotation.Retention;
 import java.text.NumberFormat;
-import java.util.ArrayList;
 
 public class BatteryMeterView extends LinearLayout implements
         BatteryStateChangeCallback, DarkReceiver, ConfigurationListener {
@@ -121,8 +120,6 @@ public class BatteryMeterView extends LinearLayout implements
     private int mUser;
 
     private boolean mIsQsHeader;
-
-    private final ArrayList<BatteryMeterViewCallbacks> mCallbacks = new ArrayList<>();
 
     private int mNonAdaptedSingleToneColor;
     private int mNonAdaptedForegroundColor;
@@ -245,12 +242,9 @@ public class BatteryMeterView extends LinearLayout implements
 
     private void updateSbBatteryStyle() {
         mBatteryStyle = Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.STATUS_BAR_BATTERY_STYLE, BATTERY_STYLE_PORTRAIT);
+                Settings.System.STATUS_BAR_BATTERY_STYLE, 0);
         updateBatteryStyle();
         updateVisibility();
-        for (int i = 0; i < mCallbacks.size(); i++) {
-            mCallbacks.get(i).onHiddenBattery(mBatteryStyle == BATTERY_STYLE_HIDDEN);
-        }
     }
 
     private void updateSbShowBatteryPercent() {
@@ -612,17 +606,5 @@ public class BatteryMeterView extends LinearLayout implements
                 updatePercentText();
             }*/ //updatePercentText gets called always by updateShowPercent
         }
-    }
-
-    public interface BatteryMeterViewCallbacks {
-        default void onHiddenBattery(boolean hidden) {}
-    }
-
-    public void addCallback(BatteryMeterViewCallbacks callback) {
-        mCallbacks.add(callback);
-    }
-
-    public void removeCallback(BatteryMeterViewCallbacks callbacks) {
-        mCallbacks.remove(callbacks);
     }
 }
