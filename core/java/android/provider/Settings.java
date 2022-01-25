@@ -5439,12 +5439,6 @@ public final class Settings {
          */
         public static final String FP_SUCCESS_VIBRATE = "fingerprint_success_vib";
 
-       /**
-         * media artwork wallpaper blur level on lockscreen
-         * @hide
-         */
-        public static final String LOCKSCREEN_MEDIA_BLUR = "lockscreen_media_blur";
-
 	/**
          * Whether to wake the display when plugging or unplugging the charger
          *
