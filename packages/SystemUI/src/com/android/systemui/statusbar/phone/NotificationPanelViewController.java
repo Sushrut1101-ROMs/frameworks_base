@@ -3874,7 +3874,7 @@ public class NotificationPanelViewController extends PanelViewController {
     }
 
     public void setLockscreenDoubleTapToSleep(boolean isDoubleTapEnabled) {
-        mIsLockscreenDoubleTapEnabled = isDoubleTapEnabled
+        mIsLockscreenDoubleTapEnabled = isDoubleTapEnabled;
     }
 
     public void setSbDoubleTapToSleep(boolean isDoubleTapEnabled) {
