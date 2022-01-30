@@ -228,7 +228,7 @@ public class MobileMappings {
             if (b != null) {
                 config.alwaysShowDataRatIcon = b.getBoolean(
                         CarrierConfigManager.KEY_ALWAYS_SHOW_DATA_RAT_ICON_BOOL);
-                config.show4gForLte = b.getBoolean(
+                config.show4gFor3g = b.getBoolean(
                         CarrierConfigManager.KEY_SHOW_4G_FOR_3G_DATA_ICON_BOOL);
                 config.hideLtePlus = b.getBoolean(
                         CarrierConfigManager.KEY_HIDE_LTE_PLUS_DATA_ICON_BOOL);
